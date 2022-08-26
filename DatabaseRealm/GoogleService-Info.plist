@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>616644245581-6ovk9p2codvkgaq2l9hkaa657f2jjgeb.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.616644245581-6ovk9p2codvkgaq2l9hkaa657f2jjgeb</string>
+	<key>API_KEY</key>
+	<string>AIzaSyB7Xt0QD2K0tzl4M-UxTsquDd7-p8qO8J4</string>
+	<key>GCM_SENDER_ID</key>
+	<string>616644245581</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>app.watanabe.soi.DatabaseRealm</string>
+	<key>PROJECT_ID</key>
+	<string>databaserealm</string>
+	<key>STORAGE_BUCKET</key>
+	<string>databaserealm.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:616644245581:ios:bf1247cc145749768a4404</string>
+</dict>
+</plist>

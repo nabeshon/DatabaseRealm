@@ -13,6 +13,8 @@
 		EB82D15928B9323900315382 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB82D15728B9323900315382 /* Main.storyboard */; };
 		EB82D15B28B9323900315382 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EB82D15A28B9323900315382 /* Assets.xcassets */; };
 		EB82D15E28B9323900315382 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB82D15C28B9323900315382 /* LaunchScreen.storyboard */; };
+		EB82D16728B9329D00315382 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = EB82D16628B9329D00315382 /* FirebaseFirestore */; };
+		EB82D16928B9337A00315382 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EB82D16828B9337A00315382 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,7 @@
 		EB82D15A28B9323900315382 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EB82D15D28B9323900315382 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EB82D15F28B9323900315382 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EB82D16828B9337A00315382 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +34,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB82D16728B9329D00315382 /* FirebaseFirestore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +67,7 @@
 				EB82D15A28B9323900315382 /* Assets.xcassets */,
 				EB82D15C28B9323900315382 /* LaunchScreen.storyboard */,
 				EB82D15F28B9323900315382 /* Info.plist */,
+				EB82D16828B9337A00315382 /* GoogleService-Info.plist */,
 			);
 			path = DatabaseRealm;
 			sourceTree = "<group>";
@@ -83,6 +88,9 @@
 			dependencies = (
 			);
 			name = DatabaseRealm;
+			packageProductDependencies = (
+				EB82D16628B9329D00315382 /* FirebaseFirestore */,
+			);
 			productName = DatabaseRealm;
 			productReference = EB82D14E28B9323900315382 /* DatabaseRealm.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +119,9 @@
 				Base,
 			);
 			mainGroup = EB82D14528B9323900315382;
+			packageReferences = (
+				EB82D16528B9329D00315382 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = EB82D14F28B9323900315382 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -126,6 +137,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EB82D15E28B9323900315382 /* LaunchScreen.storyboard in Resources */,
+				EB82D16928B9337A00315382 /* GoogleService-Info.plist in Resources */,
 				EB82D15B28B9323900315382 /* Assets.xcassets in Resources */,
 				EB82D15928B9323900315382 /* Main.storyboard in Resources */,
 			);
@@ -356,6 +368,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		EB82D16528B9329D00315382 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		EB82D16628B9329D00315382 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EB82D16528B9329D00315382 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = EB82D14628B9323900315382 /* Project object */;
 }

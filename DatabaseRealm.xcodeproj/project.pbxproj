@@ -7,17 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EB50D2C728C381CA00B20F9B /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = EB50D2C628C381CA00B20F9B /* Realm */; };
+		EB50D2C928C381CA00B20F9B /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = EB50D2C828C381CA00B20F9B /* RealmSwift */; };
+		EB50D2CB28C382AB00B20F9B /* Memo.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB50D2CA28C382AB00B20F9B /* Memo.swift */; };
 		EB82D15228B9323900315382 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB82D15128B9323900315382 /* AppDelegate.swift */; };
 		EB82D15428B9323900315382 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB82D15328B9323900315382 /* SceneDelegate.swift */; };
 		EB82D15628B9323900315382 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB82D15528B9323900315382 /* ViewController.swift */; };
 		EB82D15928B9323900315382 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB82D15728B9323900315382 /* Main.storyboard */; };
 		EB82D15B28B9323900315382 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EB82D15A28B9323900315382 /* Assets.xcassets */; };
 		EB82D15E28B9323900315382 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB82D15C28B9323900315382 /* LaunchScreen.storyboard */; };
-		EB82D16728B9329D00315382 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = EB82D16628B9329D00315382 /* FirebaseFirestore */; };
-		EB82D16928B9337A00315382 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EB82D16828B9337A00315382 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		EB50D2CA28C382AB00B20F9B /* Memo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Memo.swift; sourceTree = "<group>"; };
 		EB82D14E28B9323900315382 /* DatabaseRealm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DatabaseRealm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB82D15128B9323900315382 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EB82D15328B9323900315382 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -26,7 +28,6 @@
 		EB82D15A28B9323900315382 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EB82D15D28B9323900315382 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EB82D15F28B9323900315382 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		EB82D16828B9337A00315382 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -34,7 +35,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EB82D16728B9329D00315382 /* FirebaseFirestore in Frameworks */,
+				EB50D2C928C381CA00B20F9B /* RealmSwift in Frameworks */,
+				EB50D2C728C381CA00B20F9B /* Realm in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -67,7 +69,7 @@
 				EB82D15A28B9323900315382 /* Assets.xcassets */,
 				EB82D15C28B9323900315382 /* LaunchScreen.storyboard */,
 				EB82D15F28B9323900315382 /* Info.plist */,
-				EB82D16828B9337A00315382 /* GoogleService-Info.plist */,
+				EB50D2CA28C382AB00B20F9B /* Memo.swift */,
 			);
 			path = DatabaseRealm;
 			sourceTree = "<group>";
@@ -89,7 +91,8 @@
 			);
 			name = DatabaseRealm;
 			packageProductDependencies = (
-				EB82D16628B9329D00315382 /* FirebaseFirestore */,
+				EB50D2C628C381CA00B20F9B /* Realm */,
+				EB50D2C828C381CA00B20F9B /* RealmSwift */,
 			);
 			productName = DatabaseRealm;
 			productReference = EB82D14E28B9323900315382 /* DatabaseRealm.app */;
@@ -120,7 +123,7 @@
 			);
 			mainGroup = EB82D14528B9323900315382;
 			packageReferences = (
-				EB82D16528B9329D00315382 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				EB50D2C528C381CA00B20F9B /* XCRemoteSwiftPackageReference "realm-swift" */,
 			);
 			productRefGroup = EB82D14F28B9323900315382 /* Products */;
 			projectDirPath = "";
@@ -137,7 +140,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				EB82D15E28B9323900315382 /* LaunchScreen.storyboard in Resources */,
-				EB82D16928B9337A00315382 /* GoogleService-Info.plist in Resources */,
 				EB82D15B28B9323900315382 /* Assets.xcassets in Resources */,
 				EB82D15928B9323900315382 /* Main.storyboard in Resources */,
 			);
@@ -153,6 +155,7 @@
 				EB82D15628B9323900315382 /* ViewController.swift in Sources */,
 				EB82D15228B9323900315382 /* AppDelegate.swift in Sources */,
 				EB82D15428B9323900315382 /* SceneDelegate.swift in Sources */,
+				EB50D2CB28C382AB00B20F9B /* Memo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -370,21 +373,26 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		EB82D16528B9329D00315382 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+		EB50D2C528C381CA00B20F9B /* XCRemoteSwiftPackageReference "realm-swift" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			repositoryURL = "https://github.com/realm/realm-swift";
 			requirement = {
-				branch = master;
-				kind = branch;
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		EB82D16628B9329D00315382 /* FirebaseFirestore */ = {
+		EB50D2C628C381CA00B20F9B /* Realm */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = EB82D16528B9329D00315382 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseFirestore;
+			package = EB50D2C528C381CA00B20F9B /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = Realm;
+		};
+		EB50D2C828C381CA00B20F9B /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EB50D2C528C381CA00B20F9B /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = RealmSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

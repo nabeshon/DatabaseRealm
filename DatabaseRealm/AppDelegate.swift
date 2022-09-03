@@ -5,17 +5,23 @@
 //  Created by 渡邉昇 on 2022/08/27.
 //
 
-import UIKit
-import FirebaseCore
 
-@UIApplicationMain
+import UIKit
+import RealmSwift
+
+@main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-    var window: UIWindow?
+
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        FirebaseApp.configure()
+        
+        let config = Realm.Configuration(schemaVersion: 1,
+                                         migrationBlock: nil,
+                                         deleteRealmIfMigrationNeeded: true)
+        Realm.Configuration.defaultConfiguration = config
+        
         return true
     }
 

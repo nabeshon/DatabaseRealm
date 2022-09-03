@@ -6,64 +6,63 @@
 //
 
 import UIKit
-import Firebase
+import RealmSwift
 
-class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-
-    @IBOutlet var nameTextField: UITextField!
-    @IBOutlet var addressTextField: UITextField!
-    @IBOutlet var tableView: UITableView!
-
-    var addresses: [[String : String]] = []
+class ViewController: UIViewController, UITextFieldDelegate {
+    
+    @IBOutlet var titleTextField: UITextField!
+    @IBOutlet var contentTextField: UITextField!
+    
+    let realm = try! Realm()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        tableView.delegate = self
-        tableView.dataSource = self
-
-        Firebase.Firestore.firestore().collection("addresses").addSnapshotListener{ (querySnapshot, error) in
-            guard let snapshot = querySnapshot else{
-                print(error!)
-                return
+        
+        titleTextField.delegate = self
+        contentTextField.delegate = self
+        
+        let memo: Memo? = read()
+        
+        titleTextField.text = memo?.title
+        contentTextField.text = memo?.content
+    }
+    
+    func read() -> Memo? {
+        return realm.objects(Memo.self).first
+    }
+    
+    @IBAction func save() {
+        let title: String = titleTextField.text!
+        let content: String = contentTextField.text!
+        
+        let memo: Memo? = read()
+        
+        if memo != nil {
+            try! realm.write {
+                memo!.title = title
+                memo!.content = content
             }
-            snapshot.documentChanges.forEach{ diff in
-                if (diff.type == .added){
-                    let name = diff.document.data()["name"] as! String
-                    let address = diff.document.data()["address"] as! String
-
-                    self.addresses.append([
-                        "name": name,
-                        "address": address,
-                    ])
-                    self.tableView.reloadData()
-                }
+        } else {
+            let newMemo = Memo()
+            newMemo.title = title
+            newMemo.content = content
+            
+            try! realm.write {
+                realm.add(newMemo)
             }
         }
+        
+        let alert: UIAlertController = UIAlertController(title: "成功",message: "保存しました",preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title:"OK", style: .default, handler: nil))
+        present(alert, animated: true, completion: nil)
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
     }
 
-    @IBAction func send() {
-        let addressData = [
-            "name": nameTextField.text,
-            "address": addressTextField.text,
-        ]
 
-        Firebase.Firestore.firestore().collection("addresses").addDocument(data: addressData
-        ) { err in
-            if let err = err {
-                print("送信できませんでした: \(err)")
-            }
-        }
-    }
-
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return addresses.count
-    }
-
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell: UITableViewCell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        cell.textLabel?.text = addresses[indexPath.row]["name"]
-        cell.detailTextLabel?.text = addresses[indexPath.row]["address"]
-        return cell
-    }
 }
+
+
